@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EmployeeServiceTests" project="MokitoTesting" tests="5" started="5" failures="0" errors="5" ignored="0">
+  <testsuite name="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.045" displayname="EmployeeServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]">
+    <testcase name="givenEmployeeId_whenDeleteEmployee_thenNothing" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.032" displayname="JUnit test for deleteEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeId_whenDeleteEmployee_thenNothing()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.&lt;init&gt;(EmployeeServiceTests.java:141)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.003" displayname="JUnit test for getAllEmployees method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.&lt;init&gt;(EmployeeServiceTests.java:141)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.002" displayname="JUnit test for getEmployeeById method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.&lt;init&gt;(EmployeeServiceTests.java:141)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.001" displayname="JUnit test for saveEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.&lt;init&gt;(EmployeeServiceTests.java:141)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.001" displayname="JUnit test for updateEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.&lt;init&gt;(EmployeeServiceTests.java:141)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

@@ -1,0 +1,47 @@
+package com.breginner.MokitoTesting.test;
+
+import java.util.Optional;
+
+import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.breginner.MokitoTesting.model.Employee;
+import com.breginner.MokitoTesting.repository.EmployeeRepository;
+import com.breginner.MokitoTesting.service.EmployeeService;
+
+@ExtendWith(MockitoExtension.class)
+public class EmployeeServiceTests {
+	@Mock
+    private EmployeeRepository employeerepo;
+
+    @InjectMocks
+    private EmployeeService service;
+    
+    private Employee employee;
+    
+    @BeforeEach
+    public void setup(){
+    	employee = new Employee(1,"amisha","amisha@gmail.com");
+    	employeerepo.save(employee);
+    	
+    }
+    @DisplayName("JUnit test for saveEmployee method")
+    @Test
+    public void givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject(){
+    	given(employeerepo.findById(employee.getId()))
+        .willReturn(Optional.empty());
+    	given(employeerepo.save(employee)).willReturn(employee);
+    	System.out.println(employeerepo);
+    	System.out.println(service);
+    }
+    
+    //@AfterEach
+    
+
+}

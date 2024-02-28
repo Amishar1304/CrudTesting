@@ -1,0 +1,65 @@
+package com.breginner.MokitoTesting.test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.breginner.MokitoTesting.model.Employee;
+import com.breginner.MokitoTesting.repository.EmployeeRepository;
+import com.breginner.MokitoTesting.service.EmployeeService;
+
+
+
+
+@ExtendWith(MockitoExtension.class)
+public class EmployeeServiceTests {
+
+    @Mock
+    private EmployeeRepository employeeRepo;
+
+    @InjectMocks
+    private EmployeeService service;
+
+    private Employee employee;
+
+    @BeforeEach
+    public void setup() {
+        employee = new Employee(1, "amisha", "amisha@gmail.com");
+    }
+
+    @DisplayName("JUnit test for saveEmployee method")
+    @Test
+    public void givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject() {
+        Mockito.when(employeeRepo.findById(employee.getId())).thenReturn(Optional.empty());
+        Mockito.when(employeeRepo.save(employee)).thenReturn(employee);
+
+       
+        Employee savedEmployee = service.createEmployee(employee);
+        System.out.println(savedEmployee);
+        assertThat(savedEmployee).isNotNull();
+        
+        
+
+//        org.junit.jupiter.api.Assertions.assertThrows(ResourceNotFoundException.class, () -> {
+//            service.createEmployee(employee);
+//        });
+//
+//        verify(employeeRepo, never()).save(any(Employee.class));
+//
+
+   }
+
+    
+    }

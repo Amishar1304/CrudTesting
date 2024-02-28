@@ -1,0 +1,21 @@
+package com.breginner.MokitoTesting.test;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.breginner.MokitoTesting.repository.EmployeeRepository;
+import com.breginner.MokitoTesting.service.EmployeeService;
+
+@ExtendWith(MockitoExtension.class)
+public class EmployeeServiceTests {
+	@Mock
+    private EmployeeRepository employeerepo;
+
+    @InjectMocks
+    private EmployeeService service;
+    
+    
+
+}

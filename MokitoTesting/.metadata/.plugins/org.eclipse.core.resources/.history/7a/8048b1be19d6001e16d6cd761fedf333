@@ -1,0 +1,110 @@
+package com.breginner.MokitoTesting.test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.breginner.MokitoTesting.model.Employee;
+import com.breginner.MokitoTesting.repository.EmployeeRepository;
+import com.breginner.MokitoTesting.service.EmployeeService;
+
+
+
+@SpringBootTest
+@ExtendWith(MockitoExtension.class)
+public class EmployeeServiceTests {
+
+    @Mock
+    private EmployeeRepository employeeRepo;
+
+    @InjectMocks
+    private EmployeeService service;
+
+    private Employee employee;
+
+    @BeforeEach
+    public void setup() {
+        employee = new Employee(1, "amisha", "amisha@gmail.com");
+    }
+
+    @DisplayName("JUnit test for saveEmployee method")
+    @Test
+    public void givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject() {
+        //when(employeeRepo.findById(employee.getId())).thenReturn(Optional.empty());
+        when(employeeRepo.save(employee)).thenReturn(employee);
+
+        
+
+        Employee savedEmployee = service.saveEmployee(employee);
+       System.out.println(savedEmployee);
+        assertThat(savedEmployee).isNotNull();
+        
+        
+
+    }
+    
+    @DisplayName("JUnit test for getAllEmployees method")
+    @Test
+    public void givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList(){
+        
+
+        Employee employee1 = new Employee(2, "Jane", "jane@example.com");
+
+        Mockito.when(employeeRepo.findAll()).thenReturn(List.of(employee,employee1));
+
+     
+        List<Employee> employeeList = service.getAllEmployees();
+
+        
+        assertThat(employeeList).isNotNull();
+        assertThat(employeeList.size()).isEqualTo(2);
+    }
+   
+    
+    @DisplayName("JUnit test for getEmployeeById method")
+    @Test
+    public void givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject(){
+       
+    	Mockito.when(employeeRepo.findById(1)).thenReturn(Optional.of(employee));
+
+        
+        Employee savedEmployee = service.getEmployeeById(employee.getId());
+        assertThat(savedEmployee).isNotNull();
+    }
+    
+    
+    //put
+    @DisplayName("JUnit test for updateEmployee method")
+    @Test
+    public void givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee(){
+      
+        when(employeeRepo.save(employee)).thenReturn(employee);
+       
+        employee.setName("Tommy");
+        employee.setEmail("tommy@gmail.com");
+       
+        Employee updatedEmployee = service.updateEmployee(2, employee);
+
+        assertThat(updatedEmployee.getName()).isEqualTo("Tommy");
+        assertThat(updatedEmployee.getEmail()).isEqualTo("tommy@gmail.com");
+    
+    }
+    
+    //delete
+    
+    }

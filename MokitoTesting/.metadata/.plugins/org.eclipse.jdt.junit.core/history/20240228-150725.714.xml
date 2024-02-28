@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EmployeeServiceTests" project="MokitoTesting" tests="4" started="4" failures="0" errors="1" ignored="0">
+  <testsuite name="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.4" displayname="EmployeeServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]">
+    <testcase name="givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.276" displayname="JUnit test for getAllEmployees method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList()]"/>
+    <testcase name="givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.021" displayname="JUnit test for getEmployeeById method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject()]"/>
+    <testcase name="givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.035" displayname="JUnit test for saveEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject()]"/>
+    <testcase name="givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.037" displayname="JUnit test for updateEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee()]">
+      <error>org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+Strict stubbing argument mismatch. Please check:
+ - this invocation of 'save' method:
+    employeeRepo.save(
+    Employee [id=1, name=Tommy, email=tommy@gmail.com]
+);
+    -&gt; at com.breginner.MokitoTesting.service.EmployeeService.updateEmployee(EmployeeService.java:47)
+ - has following stubbing(s) with different arguments:
+    1. employeeRepo.save(
+    Employee [id=1, name=Tommy, email=tommy@gmail.com]
+);
+      -&gt; at com.breginner.MokitoTesting.test.EmployeeServiceTests.givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee(EmployeeServiceTests.java:101)
+Typically, stubbing argument mismatch indicates user mistake when writing tests.
+Mockito fails early so that you can debug potential problem easily.
+However, there are legit scenarios when this exception generates false negative signal:
+  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
+    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
+  - stubbed method is intentionally invoked with different arguments by code under test
+    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
+For more information see javadoc for PotentialStubbingProblem class.&#13;
+	at com.breginner.MokitoTesting.service.EmployeeService.updateEmployee(EmployeeService.java:47)&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee(EmployeeServiceTests.java:107)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

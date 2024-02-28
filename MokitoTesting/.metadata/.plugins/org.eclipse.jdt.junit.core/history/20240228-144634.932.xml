@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EmployeeServiceTests" project="MokitoTesting" tests="5" started="5" failures="1" errors="1" ignored="0">
+  <testsuite name="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.558" displayname="EmployeeServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]">
+    <testcase name="givenEmployeeId_whenDeleteEmployee_thenNothing" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.166" displayname="JUnit test for deleteEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeId_whenDeleteEmployee_thenNothing()]">
+      <failure>Wanted but not invoked:
+employeeRepo.deleteById(1);
+-&gt; at com.breginner.MokitoTesting.test.EmployeeServiceTests.givenEmployeeId_whenDeleteEmployee_thenNothing(EmployeeServiceTests.java:123)
+
+However, there was exactly 1 interaction with this mock:
+employeeRepo.findById(1);
+-&gt; at com.breginner.MokitoTesting.service.EmployeeService.deleteEmployee(EmployeeService.java:53)
+
+&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.givenEmployeeId_whenDeleteEmployee_thenNothing(EmployeeServiceTests.java:123)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.322" displayname="JUnit test for getAllEmployees method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeesList_whenGetAllEmployees_thenReturnEmployeesList()]"/>
+    <testcase name="givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.015" displayname="JUnit test for getEmployeeById method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeId_whenGetEmployeeById_thenReturnEmployeeObject()]"/>
+    <testcase name="givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.023" displayname="JUnit test for saveEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeObject_whenSaveEmployee_thenReturnEmployeeObject()]"/>
+    <testcase name="givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee" classname="com.breginner.MokitoTesting.test.EmployeeServiceTests" time="0.011" displayname="JUnit test for updateEmployee method" uniqueid="[engine:junit-jupiter]/[class:com.breginner.MokitoTesting.test.EmployeeServiceTests]/[method:givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.breginner.MokitoTesting.model.Employee.getName()" because "updatedEmployee" is null&#13;
+	at com.breginner.MokitoTesting.test.EmployeeServiceTests.givenEmployeeObject_whenUpdateEmployee_thenReturnUpdatedEmployee(EmployeeServiceTests.java:105)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>
