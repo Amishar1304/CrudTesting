@@ -1,0 +1,5 @@
+package com.beignner.FeignClientEx.model;
+
+public class Employee {
+
+}

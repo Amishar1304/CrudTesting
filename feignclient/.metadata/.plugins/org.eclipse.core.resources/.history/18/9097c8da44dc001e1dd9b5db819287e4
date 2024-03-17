@@ -1,0 +1,9 @@
+package com.beignner.FeignClientEx.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(url="http://localhost:8080", value ="employee-service")
+
+public interface EmpService {
+
+}

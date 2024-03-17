@@ -1,0 +1,38 @@
+package com.beignner.FeignClientEx.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.beignner.FeignClientEx.model.Employee;
+import com.beignner.FeignClientEx.repository.EmployeeRepo;
+
+@Service
+public class EmpService {
+	@Autowired
+	private EmployeeRepo repo;
+
+	public List<Employee> getAllEmployee() {
+		return repo.findAll();
+	}
+
+	public Employee getEmployeeById(int id) {
+		return repo.findById(id).get();
+	}
+
+	public Employee createEmployee(Employee employee) {
+		return repo.save(employee);
+	}
+
+	public Employee updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	public void deleteEmployee(int id) {
+		repo.deleteById(id);
+	}
+
+}

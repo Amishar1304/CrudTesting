@@ -1,0 +1,5 @@
+package com.beignner.FeignClientEx.controller;
+
+public class EmpController {
+
+}

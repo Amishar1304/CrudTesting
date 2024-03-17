@@ -1,0 +1,5 @@
+package com.beignner.FeignClientEx.service;
+
+public interface EmpService {
+
+}

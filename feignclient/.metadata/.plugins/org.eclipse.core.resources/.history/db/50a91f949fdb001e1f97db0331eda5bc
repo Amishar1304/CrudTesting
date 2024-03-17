@@ -1,0 +1,14 @@
+package com.beignner.FeignClientEx.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.beignner.FeignClientEx.service.EmpService;
+
+@RestController
+public class EmpController {
+	@Autowired
+	private EmpService service;
+	
+
+}
