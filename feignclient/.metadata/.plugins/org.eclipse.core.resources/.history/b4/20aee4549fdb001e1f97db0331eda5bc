@@ -1,5 +1,0 @@
-package com.beignner.FeignClientEx.repository;
-
-public class EmployeeRepo {
-
-}
